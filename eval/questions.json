@@ -1,0 +1,164 @@
+[
+  {
+    "id": "Q01",
+    "question_tr": "İlaç ile plasebo gruplarını karşılaştıracağım. Orta büyüklükte bir etki (d=0,5) bekliyorum, %80 güç ve iki yönlü alfa 0,05 ile her gruba kaç hasta gerekir?",
+    "expected_family": "t2-indep",
+    "expected_params": {
+      "mode": "a-priori",
+      "d": 0.5,
+      "alpha": 0.05,
+      "power": 0.8,
+      "tails": 2,
+      "ratio": 1.0
+    },
+    "expected_result_provisional": {
+      "n1": 64,
+      "n2": 64,
+      "n_total": 128,
+      "actual_power": 0.8015,
+      "critical": 1.979,
+      "df": 126,
+      "ncp": 2.8284
+    },
+    "expected_action": "call_tool"
+  },
+  {
+    "id": "Q02",
+    "question_tr": "Yeni bir analjezik ile plasebonun ağrı skorlarını kıyaslayacağım. Büyük etki (d=0,8), güç %90, alfa 0,05, iki yönlü. Toplam kaç denek lazım?",
+    "expected_family": "t2-indep",
+    "expected_params": {
+      "mode": "a-priori",
+      "d": 0.8,
+      "alpha": 0.05,
+      "power": 0.9,
+      "tails": 2,
+      "ratio": 1.0
+    },
+    "expected_result_provisional": {
+      "n1": 34,
+      "n2": 34,
+      "n_total": 68,
+      "actual_power": 0.9015,
+      "critical": 1.9966,
+      "df": 66,
+      "ncp": 3.2985
+    },
+    "expected_action": "call_tool"
+  },
+  {
+    "id": "Q03",
+    "question_tr": "İlacın plaseboya göre yalnızca daha iyi olduğunu test edeceğim (tek yönlü), d=0,3, alfa 0,05, güç 0,80. Örneklem büyüklüğü nedir?",
+    "expected_family": "t2-indep",
+    "expected_params": {
+      "mode": "a-priori",
+      "d": 0.3,
+      "alpha": 0.05,
+      "power": 0.8,
+      "tails": 1,
+      "ratio": 1.0
+    },
+    "expected_result_provisional": {
+      "n1": 139,
+      "n2": 139,
+      "n_total": 278,
+      "actual_power": 0.8023,
+      "critical": 1.6504,
+      "df": 276,
+      "ncp": 2.501
+    },
+    "expected_action": "call_tool"
+  },
+  {
+    "id": "Q04",
+    "question_tr": "Plasebo grubu ilaç grubunun iki katı büyüklükte olacak (n2/n1=2). d=0,5, alfa 0,05, güç 0,90, iki yönlü. Her gruptaki hasta sayısı kaç olmalı?",
+    "expected_family": "t2-indep",
+    "expected_params": {
+      "mode": "a-priori",
+      "d": 0.5,
+      "alpha": 0.05,
+      "power": 0.9,
+      "tails": 2,
+      "ratio": 2.0
+    },
+    "expected_result_provisional": {
+      "n1": 64,
+      "n2": 128,
+      "n_total": 192,
+      "actual_power": 0.9014,
+      "critical": 1.9725,
+      "df": 190,
+      "ncp": 3.266
+    },
+    "expected_action": "call_tool"
+  },
+  {
+    "id": "Q05",
+    "question_tr": "Çalışmamızda ilaç grubunda 25, plasebo grubunda 25 hasta var. Etki büyüklüğü d=0,6, alfa 0,05, iki yönlü. Bu çalışmanın istatistiksel gücü nedir?",
+    "expected_family": "t2-indep",
+    "expected_params": {
+      "mode": "post-hoc",
+      "d": 0.6,
+      "alpha": 0.05,
+      "tails": 2,
+      "n1": 25,
+      "n2": 25
+    },
+    "expected_result_provisional": {
+      "n1": 25,
+      "n2": 25,
+      "n_total": 50,
+      "actual_power": 0.5473,
+      "critical": 2.0106,
+      "df": 48,
+      "ncp": 2.1213
+    },
+    "expected_action": "call_tool"
+  },
+  {
+    "id": "Q06",
+    "question_tr": "Katı bir alfa (0,01) kullanacağız; ilaç-plasebo farkı için d=0,5, güç 0,95, iki yönlü. Kaç hasta gerekir?",
+    "expected_family": "t2-indep",
+    "expected_params": {
+      "mode": "a-priori",
+      "d": 0.5,
+      "alpha": 0.01,
+      "power": 0.95,
+      "tails": 2,
+      "ratio": 1.0
+    },
+    "expected_result_provisional": {
+      "n1": 145,
+      "n2": 145,
+      "n_total": 290,
+      "actual_power": 0.9512,
+      "critical": 2.593,
+      "df": 288,
+      "ncp": 4.2573
+    },
+    "expected_action": "call_tool"
+  },
+  {
+    "id": "Q07",
+    "question_tr": "Aynı hastaların tedavi öncesi ve sonrası tansiyonunu karşılaştıracağım, d=0,5, güç 0,80. Kaç hasta lazım?",
+    "expected_family": "t-paired",
+    "expected_action": "decline_unsupported_family"
+  },
+  {
+    "id": "Q08",
+    "question_tr": "Üç farklı tedavi koluna (A, B, C) hastaları rastgele atayıp ortalama kan şekeri farkını tek yönlü varyans analiziyle test edeceğim. Örneklem kaç olmalı?",
+    "expected_family": "anova-oneway",
+    "expected_action": "decline_unsupported_family"
+  },
+  {
+    "id": "Q09",
+    "question_tr": "İki tedavinin yanıt oranlarını (yanıt var/yok) 2x2 tabloda karşılaştıracağım. Kaç hasta gerekir?",
+    "expected_family": "chi2-contingency",
+    "expected_action": "decline_unsupported_family"
+  },
+  {
+    "id": "Q10",
+    "question_tr": "Çalışmam için kaç hasta gerekir?",
+    "expected_family": "ambiguous",
+    "expected_action": "ask_researcher"
+  }
+]

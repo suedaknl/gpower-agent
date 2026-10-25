@@ -1,0 +1,24 @@
+[project]
+name = "tpower"
+version = "0.1.0"
+description = "Independent-samples t-test power engine with CLI and MCP layers (teaching project)"
+requires-python = ">=3.10"
+dependencies = ["scipy>=1.11"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.2,<2"]
+test = ["pytest", "statsmodels"]
+
+[project.scripts]
+gpower-clone = "tpower.cli:main"
+tpower-mcp = "tpower.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
